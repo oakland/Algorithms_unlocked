@@ -3,10 +3,11 @@ function computeLCSTable(x = '', y = '') {
   const lx = x.length;
   const ly = y.length;
 
-  // init first row and first column
+  // init first column
   for(let i = 0; i <= lx; i++) {
     table.push([0]);
   }
+  // init first row
   for(let i = 0; i <= ly; i++) {
     table[0][i] = 0;
   }
@@ -27,4 +28,4 @@ function computeLCSTable(x = '', y = '') {
   return table;
 }
 
-console.log(computeLCSTable('CATCGA', 'GTACCGTCA'));
+module.exports = computeLCSTable;
